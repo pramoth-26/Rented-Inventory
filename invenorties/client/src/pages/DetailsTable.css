@@ -1,0 +1,100 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scroll */
+  }
+  
+  .icontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centers content vertically */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full width */
+    padding: 20px;
+    background-color: #f4f4f9; /*Light background */
+    min-height: '100vh';
+    position: 'relative';
+  }  
+.details-container {
+    padding: 20px;
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  .details-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .details-table th,
+  .details-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .details-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }
+  
+  .details-table tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .issue {
+    color: #e74c3c;
+    font-weight: 600;
+  }
+  
+  .receive {
+    color: #2ecc71;
+    font-weight: 600;
+  }
+  
+  /* Responsive table */
+  @media screen and (max-width: 768px) {
+    .details-table thead {
+      display: none;
+    }
+  
+    .details-table, .details-table tbody, .details-table tr, .details-table td {
+      display: block;
+      width: 100%;
+    }
+  
+    .details-table tr {
+      margin-bottom: 15px;
+      background: #fff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      padding: 10px;
+    }
+  
+    .details-table td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
+  
+    .details-table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 15px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      font-weight: bold;
+      text-align: left;
+      color: #555;
+    }
+  }
+  

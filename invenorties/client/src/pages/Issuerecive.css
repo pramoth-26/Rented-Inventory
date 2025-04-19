@@ -1,0 +1,164 @@
+/* Full-screen container */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scroll */
+}
+
+.icontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centers content vertically */
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full width */
+  padding: 20px;
+  background-color: #f4f4f9; /*Light background */
+  min-height: '100vh';
+  position: 'relative';
+
+}
+
+/* Full-width content wrapper */
+.icontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Ensures centering */
+  padding: 40px;
+  width: 50%;
+  max-width: 50%; /* Full width */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Form */
+.iform {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 60%;
+  max-width: 60%; /* Almost full-width */
+}
+
+/* Input Fields */
+.iinput {
+  padding: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 18px; /* Bigger for better visibility */
+  width: 100%; /* Full width */
+  box-sizing: border-box;
+}
+
+/* Submit Button */
+.ibutton {
+  padding: 14px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%; /* Full width */
+  transition: background 0.3s ease;
+}
+
+.ibutton:hover {
+  background-color: #555;
+}
+
+.item-list {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.item-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.delete-icon {
+  color: red;
+  cursor: pointer;
+}
+
+/* 📌 Responsive for Large Screens */
+@media (min-width: 1200px) {
+  .icontent {
+      max-width: 80%;
+      padding: 50px;
+  }
+
+  .iform {
+      max-width: 75%;
+  }
+}
+
+/* 📌 Responsive for Medium Screens (Tablets & Laptops) */
+@media (max-width: 1024px) {
+  .icontent {
+      max-width: 90%;
+      padding: 35px;
+  }
+
+  .iform {
+      max-width: 85%;
+  }
+
+  .iinput,
+  .ibutton {
+      font-size: 16px;
+      padding: 12px;
+  }
+}
+
+/* 📌 Mobile View (Small Screens) */
+@media (max-width: 768px) {
+  .icontainer {
+      padding: 15px;
+  }
+
+  .icontent {
+      max-width: 100%;
+      padding: 20px;
+  }
+
+  .iform {
+      width: 95%;
+  }
+
+  .iinput,
+  .ibutton {
+      font-size: 15px;
+      padding: 10px;
+  }
+}
+
+/* 📌 Small Mobile Screens (Below 480px) */
+@media (max-width: 480px) {
+  .icontent {
+      width: 100%;
+      padding: 15px;
+      border-radius: 6px;
+      box-shadow: none;
+  }
+
+  .iform {
+      width: 100%;
+  }
+
+  .iinput,
+  .ibutton {
+      font-size: 14px;
+      padding: 8px;
+  }
+}

@@ -1,0 +1,181 @@
+/* Global Header Styles */
+.premium-header {
+  background-color: #ffffff;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100vw;  /* Full screen width */
+  max-width: 100%;
+  height: 80px; /* Ensures a prominent header */
+  box-sizing: border-box;
+  position: fixed; /* Keeps header fixed on top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Left Section */
+.premium-header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Logo */
+.logo-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(99, 102, 241, 0.3);
+}
+
+/* Title */
+.header-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+
+/* Right Section */
+.premium-header-right {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Navigation Links */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.user-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+.user-name:hover {
+  color: #6366f1;
+}
+
+/* Buttons */
+.upgrade-btn {
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(99, 102, 241, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.upgrade-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Burger Menu for Mobile */
+.burger-menu {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #1f2937;
+}
+
+/* Mobile Dropdown */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  border-radius: 12px;
+  width: 200px;
+  z-index: 999;
+}
+.user-btn{
+  color: white;
+}
+.mobile-menu a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f2937;
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+
+.mobile-menu a:hover {
+  background: #f3f4f6;
+  border-radius: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .premium-header {
+    padding: 12px 24px;
+  }
+
+  /* Adjust title size */
+  .header-title {
+    font-size: 24px;
+  }
+
+  /* Reduce spacing for better fit */
+  .premium-header-right {
+    gap: 20px;
+  }
+
+  .user-info {
+    gap: 16px;
+  }
+
+  /* Adjust button size */
+  .upgrade-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hide Right Section & Show Burger */
+  .premium-header-right {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  /* Show Mobile Menu When Active */
+  .mobile-menu.active {
+    display: flex;
+  }
+}
